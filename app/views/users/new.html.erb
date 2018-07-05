@@ -1,0 +1,43 @@
+
+	<% if flash[:errors] %>
+		<% flash[:errors].each do |error| %>
+			<p><%= error %></p>
+		<% end %>
+	<% end %>
+
+	<body id = "body_image">
+
+	<div class = "registration">
+		<h2 style="color:white; text-shadow: 2px 2px black; ">Create a New Account</h2>
+	<form action="/users" method="post">			
+		<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+		<table align="center">		
+			<tr>
+				<td><input class = "register_input" type="text" name="user[first_name]" placeholder="First Name" /></td>
+			</tr>
+			<tr>
+				<td><input class = "register_input" type="text" name="user[last_name]" placeholder="Last Name" /></td>
+			</tr>
+			<tr>
+				<td><input class = "register_input" type="text" name="user[company]" placeholder="Company" /></td>
+			</tr>
+			<tr>
+				<td><input class = "register_input" type="email" name="user[email]" placeholder="Email" /></td>
+			</tr>
+				<td><input class = "register_input" type="password" name="user[password]" placeholder="Password" /></td>
+			</tr>
+			<tr>
+				<td><input class = "register_input" type="password" name="user[password_confirmation]" placeholder="Password Confirm" /></td>
+			</tr>
+		</table>
+		<button align="center" type="submit" id="register_button">Register</button>
+	</form>
+</div>
+
+<div class = "registration">
+	<h2 style="color:white; text-shadow: 2px 2px black;">Or Continue as Guest</h2>
+	<form action = "/users" method="post">
+		<input class = "register_input" type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+		<button type="submit" id="enter_button">Enter</button>
+	</form>
+</div>

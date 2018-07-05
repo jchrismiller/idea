@@ -1,0 +1,65 @@
+<div>
+<%= render "shared/header" %>
+</div>
+
+<div id="container">
+<div id="comments">
+	<h2>Say Hello!</h2>
+<form action="/bright_ideas" method="post">
+	<input id="post" type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+<p><input class="register_input" type="text" name="content" > <button>Post</button></p>
+<p><input type="hidden" name="user_id" value="<%= current_user.id %>"></p>
+
+</form>
+
+<% if @bright_ideas %>
+	<% @bright_ideas.each do |idea| %>
+	<table>
+		<thead></thead>
+		<tbody>
+			<tr>
+				<td class = "content"><a class="user_link" href="/users/<%= idea.user.id %>"><%= idea.user.first_name %>  (<%= idea.user.company %>)</a> <%= idea.content %></td>
+
+				<td>
+					<form action="likes" method="post">
+						<input id="post" type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+						<input type="hidden" name="user_id" value="<%= current_user.id %>">
+						<input type="hidden" name="bright_idea_id" value="<%= idea.id %>">
+
+						<button id="button_link">Like</button>
+					</form>					
+				</td>
+
+				<% if idea.user.email == current_user.email %>
+					<td>
+						<a href="/bright_ideas/<%= idea.id %>" data-method="delete">
+							Delete
+						</a>
+					</td>
+				<% end %>
+				<% if current_user.email == "admin@mail.com" %>
+					<td>
+						<a href="/bright_ideas/<%= idea.id %>" data-method="delete">
+							Delete
+						</a>
+
+					</td>
+				<% end %>
+
+			</tr>
+			<tr>
+				<td>
+					<% if idea.likes.count > 0 %>
+						<%= image_tag("thumb_hd.png", :class => "small_icon") %>
+						<%= idea.likes.count %>
+					<% end %>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<br>
+
+	<% end %>
+<% end %>
+</div> <!-- end comments -->
+</div>

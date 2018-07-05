@@ -1,0 +1,224 @@
+body{
+	font-family: "Arial";
+	font-size: 12px;
+	margin: 0px;
+}
+#container{
+	vertical-align: top;
+	background-color: #ebebe0;
+}
+#body_image{
+	background-image: url("beachgif.gif");
+}
+h2{
+	margin-top: 0px;
+	margin-bottom: 2px;
+	padding-top: 10px;
+}
+p{
+	margin: 5px;
+	margin-left: 0px;
+}
+#comments{
+	width: 80%;
+	margin-left: 50px;
+	margin-right: 50px;
+	margin-top: 0px;
+}
+.carousel{
+	height: 300px;
+	width: 600px;
+}
+#top{
+	background: linear-gradient(#668cff,#1a53ff);
+	display: inline-block;
+	width: 100%;
+}
+#header{
+/*	background: linear-gradient(#668cff,#1a53ff);
+*/	display: inline-block;
+	width: 100%;
+	height: 70px;
+	border-bottom: 8px solid #6b6b47;
+}
+h3{
+	margin: 0px;
+}
+#header h3{
+	color: white;
+}
+#login{
+	display: inline-block;
+	margin-top: 20px;
+	margin-right: 20px;
+	float: right;
+	vertical-align: top;
+}
+#logged_in{
+	display: inline-block;
+	margin-top: 5px;
+	margin-right: 20px;
+	vertical-align: top;
+	height: 50px;
+	font-weight: 600;
+}
+#logged_in td{
+	padding: 0px;
+}
+#login_button{
+	display: inline-block;
+}
+#login label{
+	color: white;
+}
+.title{
+	margin-top: 5px;
+	vertical-align: top;
+}
+.title_small{
+	margin-top: 10px;
+	margin-left: 10px;
+	height: 50px;
+	width: 80px;
+}
+.logo{
+	margin-left: 10px;
+	color: white;
+	height: 100px;
+	width: 100px;
+}
+div.registration{
+	margin-top: 20px;
+	text-align: center;
+	vertical-align: top;
+}
+
+h4{
+	display: inline-block;
+}
+.links{
+	display: inline-block;
+	float: right;
+	margin-right: 10px;
+}
+#links_dark{
+	text-decoration: none;
+	color: black;
+	display: inline-block;
+	float: right;
+	margin-top: 5px;
+	margin-right: 10px;
+	font-size: 16px;
+	font-weight: none;
+}
+.links_white{
+	text-decoration: none;
+	color: white;
+	display: inline-block;
+	float: right;
+	margin-top: 5px;
+	margin-right: 10px;
+	font-size: 16px;
+}
+.side_links{
+	display: inline-block;
+	float: right;
+	color: #6090f2;
+	text-decoration: none;
+	margin-top: 10px;
+	margin-right: 10px;
+	font-size: 16px;
+}
+.user_link{
+	text-decoration: none;
+	color: #6090f2;
+	font-size: 16px;
+	font-weight: 600;
+}
+form #button_link{
+	background-color: white;
+}
+th{
+	text-align: left;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+td{
+	text-align: left;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.content_block{
+	width: 250px;
+}
+
+.content{
+	background-color: white;
+	border: 1px solid #969ba3;
+	border-radius: 20px;
+	font-size: 16px;
+	padding: 10px;
+	width: 400px;
+}
+a{
+	font-size: 12px;
+}
+
+button{
+	height: 27px;
+	background:none;
+  	border: 1px solid #969ba3;
+  	font-size:1em;
+  	color: white;
+  	background: linear-gradient(#6090f2,#537bce);
+}
+#register_button{
+	margin-top: 5px;
+	height: 35px;
+	width: 183px;
+	background:none;
+  	border: 1px solid #969ba3;
+  	font-size:20px;
+  	color: white;
+  	background: linear-gradient(#65aa53,#578943);
+}
+#enter_button{
+	margin-top: 5px;
+	height: 35px;
+	width: 183px;
+	background:none;
+  	border: 1px solid #969ba3;
+  	font-size:20px;
+  	color: white;
+  	background: linear-gradient(#6090f2,#537bce);
+}
+.register_input{
+	margin: 2px;
+	padding: 5px;
+}
+.small_icon{
+	height: 20px;
+	width: 20px;
+}
+.table_data{
+	margin: 10px;
+	font-size: 16px;
+}
+
+
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */

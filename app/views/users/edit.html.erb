@@ -1,0 +1,49 @@
+<div>
+<%= render "shared/header" %>
+</div>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Edit Profile</title>
+	
+</head>
+<body>
+	<div class="table_data">
+		<h3>Edit Your Profile</h3>
+		<form action="/users/<%= current_user.id %>" method="post">
+			<input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>" >
+			<input type="hidden" name="_method" value="patch" >
+			<table>
+				<thead></thead>
+				<tbody>
+					<tr>
+						<td>First Name:</td>
+						<td><input type="text" name="first_name" value="<%= current_user.first_name %>"></td>
+					</tr>
+					<tr>
+						<td>Last Name:</td>
+						<td><input type="text" name="last_name" value="<%= current_user.last_name %>"></td>
+					</tr>
+					<tr>
+						<td>Email:</td>
+						<td><input type="email" name="email" value="<%= current_user.email %>"></td>
+					</tr>
+					<tr>
+						<td>Company:</td>
+						<td><input type="text" name="company" value="<%= current_user.company %>"></td>
+					</tr>
+					<tr>
+						<td><button>Update</button></td>
+					</tr>
+					
+
+				</tbody>
+			</table>
+			
+		</form>
+
+	</div>
+	
+
+</body>
+</html>

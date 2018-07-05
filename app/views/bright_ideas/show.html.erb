@@ -1,0 +1,12 @@
+<a class="links" href="/bright_ideas">Bright Ideas</a>
+<a class="links" href="/sessions/<%= current_user.id %>" data-method="delete">Logout</a>
+
+<h3><%= @bright_idea.user.first_name %> <%= @bright_idea.user.last_name %> says:</h3> <span class="content"><%= @bright_idea.content %></span>
+
+<p><h3>People who liked this post:</h3><p>
+
+<% if @bright_ideas %>
+	<% @bright_ideas.each do |idea| %>
+	<p><%= idea.user.first_name %> <%= idea.user.last_name %></p>
+	<% end %>
+<% end %>

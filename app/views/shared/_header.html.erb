@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<div id="header">
+		<a href="/home"><%= image_tag("title_abbr2.png", :class => "title_small") %></a>
+
+		
+
+		<div class="side_links">
+			<div id="logged_in">
+
+			Welcome,	
+			
+			<% if !current_user.guest? %>
+			<%= current_user.first_name %> 
+			<p>
+			at <%= current_user.company_name %>
+			</p>
+			<% else %>
+			<%= "Guest" %>
+			<% end %>		
+		</div>
+			<% if current_user.guest? %>
+			
+				<a id="links_dark" href="/">Register</a>
+			<% else %>
+				<a id="links_dark" href="/sessions/<%= current_user.id %>" data-method="delete">Logout</a>
+									
+				<a id="links_dark" href="/users/<%= current_user.id %>" data-method="get">Profile</a>
+			<% end %>
+		</div>
+	</div>
+
+
+<%= yield %>
+
+</body>
+</html>

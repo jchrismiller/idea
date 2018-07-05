@@ -1,0 +1,37 @@
+<div>
+<%= render "shared/header" %>
+</div>
+<div class="table_data">
+	<table>
+		<thead></thead>
+		<tbody>
+			<tr>
+				<td>First Name:</td>
+				<td><%= @user.first_name %></td>
+			</tr>
+			<tr>
+				<td>Last Name:</td>
+				<td><%= @user.last_name %></td>
+			</tr>
+			<tr>
+				<td>Email:</td>
+				<td><%= @user.email %></td>
+			</tr>
+			<tr>
+				<td>Company:</td>
+				<td><%= @user.company %></td>
+			</tr>
+		</tbody>
+	</table>
+  
+</div>
+
+<div class="table_data">
+	<% if @user.id == current_user.id %>
+	<a href="/users/<%= current_user.id %>/edit">Edit my Profile</a>
+	<% end %>
+	<p></p>
+	-----------------
+	<p>Total Number of Posts: <%= @bright_ideas %><p>
+	<p>Total Likes by User: <%= @likes %></p>
+</div>

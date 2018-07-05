@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+		<div class="top"></div>
+	
+		<%= image_tag("title_4.png", :class => "title") %>
+	
+		<div id="login">
+			<form action = "/sessions" method="post">
+			<input class = "register_input" type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+			<table id="login">
+				<tr>
+					<td>
+						<label>Email</label>
+					</td>
+					<td>
+						<label>Password</label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input class = "register_input" type="email" name="user[email]">
+					</td>
+					<td>
+						<input class = "register_input" type="password" name="user[password]">
+					</td>
+					<td>
+						<button type="submit">Login</button>
+					</td>
+				</tr>
+			</table>
+			</form>
+		</div>
+
+
+
+<%= yield %>
+
+</body>
+</html>
