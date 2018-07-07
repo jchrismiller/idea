@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
   has_many :bright_ideas
   has_many :likes
   has_many :bright_ideas, through: :likes
+  has_many :blogs
 
   # has_attached_file :image
   # validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/

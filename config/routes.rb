@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'bio' => "bios#index"
+
+  get 'blogs' => "blogs#index"
+
   root 'users#new'
 
   get "home" => "bright_ideas#index"

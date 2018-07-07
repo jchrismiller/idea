@@ -1,0 +1,9 @@
+body{
+	background-color: black;
+}
+
+#sidebar{
+	background-color: black;
+	width: 100px;
+	height: 100%;
+}

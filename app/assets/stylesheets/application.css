@@ -4,8 +4,17 @@ body{
 	margin: 0px;
 }
 #container{
-	vertical-align: top;
-	background-color: #ebebe0;
+/*	vertical-align: top;
+	display: inline-block;
+	text-align: center;
+	width: 70%;*/
+	display: grid;
+	grid-template-columns: 105px auto 350px;
+}
+.main_content{
+	background-color: #252526;
+	display: grid;
+	grid-template-columns: auto 33% auto;
 }
 #body_image{
 	background-image: url("beachgif.gif");
@@ -19,11 +28,17 @@ p{
 	margin: 5px;
 	margin-left: 0px;
 }
-#comments{
-	width: 80%;
-	margin-left: 50px;
-	margin-right: 50px;
-	margin-top: 0px;
+.comments{
+/*	text-align: center;*/
+	vertical-align: top;
+	background-color: white;
+/*	background-color: #ebebe0;*/
+	margin-top: 50px;
+	margin-bottom: 50px;
+	padding: 10px 40px;
+/*	margin: 0 auto;
+	display: inline-block;
+*/
 }
 .carousel{
 	height: 300px;
@@ -206,6 +221,129 @@ button{
 	font-size: 16px;
 }
 
+#inline-block_test{
+	background-color: blue;
+	width: 100px;
+	height: 100%;
+	display: inline-block;
+}
+
+/*====================================
+---------------SIDEBAR----------------
+====================================*/
+
+#sidebar{
+/*	width: 100px;
+	height: 11000px;
+	display: inline-block;*/
+	border-right: 8px solid #6b6b47;
+	background-color: black;
+}
+/*====================================
+---------------RIGHT SIDEBAR----------
+====================================*/
+
+#right_sidebar{
+/*	width: 10%;
+	height: 11000px;
+	display: inline-block;*/
+	background: #5e5e5e;
+}
+/*====================================
+-------------HOME ICON----------------
+====================================*/
+.icon{
+	width: 80px;
+	height: 40px;
+	margin-top: 40px;
+	margin-left: 20px;
+	margin-bottom: 40px;
+	cursor: pointer;
+}
+.home_icon{
+	width: 6px;
+	height: 50px;
+	margin: 0px 25px 0px 25px;
+	background: rgba(0,0,0,0);
+	transition: .5s;
+}
+.home_icon:before,
+.home_icon:after{
+	content: '';
+	position: absolute;
+	width: 6px;
+	height: 50px;
+	background: #f4cb42;
+	transition: .5s;
+}
+.home_icon:before{
+	margin-left: -16px;
+
+}
+.home_icon:after{
+	margin-left: 16px;
+}
+.icon.active .home_icon{
+	background: rgba(0,0,0,0);
+}
+.icon.active .home_icon:before{
+	transform: rotate(45deg);
+	margin-top: -20px;
+	background-color: #f442f1;
+
+}
+.icon.active .home_icon:after{
+	transform: rotate(135deg);
+	margin-top: -20px;
+	background-color: #f442f1;
+
+}
+.home_icon2{
+	width: 38px;
+	height: 6px;
+	margin: -28px 25px 0px 9px;
+	background: #f4cb42;
+	transition: .5s;
+}
+.home_icon2:before,
+.home_icon2:after{
+	content: '';
+	position: absolute;
+	width: 38px;
+	height: 6px;
+	background: #f4cb42;
+	transition: .5s;
+}
+.icon.active .home_icon2{
+	margin-top: -5px;
+	margin-left: 5px;
+	width: 50px;
+	background-color: #f442f1;
+}
+.icon.active .home_icon2:before{
+	transform: rotate(90deg);
+	margin-top: -16px;
+	margin-left: 28px;
+	background-color: #f442f1;
+}
+.icon.active .home_icon2:after{
+	transform: rotate(90deg);
+	margin-top: -16px;
+	margin-left: -20px;
+	background-color: #f442f1;
+
+}
+
+/*====================================
+-------------BIO ICON----------------
+====================================*/
+
+.bio_icon{
+	width: 50px;
+	height: 50px;
+	border: 6px solid blue;
+	border-radius: 50%;
+}
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	<%= csrf_meta_tags %>
+	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('.icon').hover(function(){
+				$('.icon').toggleClass('active')
+			})
+		})
+	</script>
+</head>
+<body>
+	<div class = "icon">
+		<div class = "home_icon"></div>
+		<div class="home_icon2"></div>
+	</div>
+	<div clas = "icon">
+		<div class = "bio_icon"></div>
+	</div>
+
+</body>
+</html>
