@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('.icon').hover(function(){
+				$('.icon').toggleClass('active')
+			})
+		})
+		$(document).ready(function(){
+			$('.icon2').hover(function(){
+				$('.icon2').toggleClass('active')
+			})
+		})
+		$(document).ready(function(){
+			$('.icon4').hover(function(){
+				$('.icon4').toggleClass('active')
+			})
+		})
+	</script>
+	<title></title>
+	<%= csrf_meta_tags %>
+</head>
+<body>
+	<a href = "home">
+		<div class = "icon">
+			<div class = "home_icon">
+			</div>
+			<div class = "home_icon2">			
+			</div>
+			<div class = "home_text">
+				Home
+			</div>
+		</div>
+	</a>
+	<a href="portfolio">
+		<div class = "icon2">
+			<div class = "bio_icon"></div>
+			<div class = "bio_icon2"></div>
+			<div class = "bio_icon3"></div>
+			<div class = "bio_icon4"></div>
+			<div class = "bio_icon5"></div>
+			<div class = "bio_icon6"></div>
+			<div class = "bio_icon7"></div>
+			<div class = "bio_text">
+				Portfolio
+			</div>
+		</div>
+	</a>
+	<a href="video">
+		<div class = "clicked3">
+		</div>
+	</a>
+	<a href="wall">
+		<div class = "icon4">
+			<div class = "wall_icon"></div>
+			<div class = "wall_icon2"></div>
+			<div class = "wall_icon3"></div>
+			<div class = "wall_icon4"></div>
+			<div class = "wall_icon5"></div>
+			<div class = "wall_text">
+				Wall
+			</div>
+		</div>
+	</a>
+</body>
+</html>

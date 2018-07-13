@@ -23,4 +23,12 @@ class BrightIdeasController < ApplicationController
 		return redirect_to '/home'
 	end
 
+	def video
+		render 'video'
+	end
+	
+	def portfolio
+		render 'portfolio'
+	end
+
 end

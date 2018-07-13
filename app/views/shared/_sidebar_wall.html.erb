@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	<%= csrf_meta_tags %>
+	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('.icon').hover(function(){
+				$('.icon').toggleClass('active')
+			})
+		})
+		$(document).ready(function(){
+			$('.icon2').hover(function(){
+				$('.icon2').toggleClass('active')
+			})
+		})
+		$(document).ready(function(){
+			$('.icon3').hover(function(){
+				$('.icon3').toggleClass('active')
+			})
+		})
+
+	</script>
+</head>
+<body>
+	<a href = "home">
+		<div class = "icon">
+			<div class = "home_icon">
+			</div>
+			<div class = "home_icon2">			
+			</div>
+			<div class = "home_text">
+				Home
+			</div>
+		</div>
+	</a>
+	<a href="portfolio">
+		<div class = "icon2">
+			<div class = "bio_icon"></div>
+			<div class = "bio_icon2"></div>
+			<div class = "bio_icon3"></div>
+			<div class = "bio_icon4"></div>
+			<div class = "bio_icon5"></div>
+			<div class = "bio_icon6"></div>
+			<div class = "bio_icon7"></div>
+			<div class = "bio_text">
+				Portfolio
+			</div>
+		</div>
+	</a>
+	<a href="video">
+		<div class = "icon3">
+			<div class = "vid_icon"></div>
+			<div class = "vid_icon2"></div>
+			<div class = "vid_icon3"></div>
+			<div class = "vid_icon4"></div>
+			<div class = "video_text">
+				Video
+			</div>
+		</div>
+	</a>
+	<a href="wall">
+		<div class = "clicked4">
+		</div>
+	</a>
+</body>
+</html>

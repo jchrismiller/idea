@@ -1,14 +1,14 @@
 Rails.application.routes.draw do
-  get 'bio' => "bios#index"
-
-  get 'blogs' => "blogs#index"
-
   root 'users#new'
 
-  get "home" => "bright_ideas#index"
+  get "home" => "blogs#index"
+  get "video" => "bright_ideas#video"
+  get "wall" => "bright_ideas#index"
+  get "portfolio" => "bright_ideas#portfolio"
+
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
-  resources :bright_ideas
+  resources :bright_ideas, only: [:new, :create, :destroy]
 
   resources :likes, only: [:new, :create, :destroy]
 end
